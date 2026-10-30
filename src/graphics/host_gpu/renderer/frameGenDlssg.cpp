@@ -668,8 +668,27 @@ void Initialize() {
 					static constexpr char kDefaultIni[] =
 					    "[ADDON]\n"
 					    "AddonPath=.\\\n\n"
+					    "[GENERAL]\n"
+					    "EffectSearchPaths=.\\reshade-shaders\\Shaders\\**\n"
+					    "PresetPath=.\\ReShadePreset.ini\n"
+					    "StartupPresetPath=.\\ReShadePreset.ini\n"
+					    "TextureSearchPaths=.\\reshade-shaders\\Textures\\**\n\n"
 					    "[RenoDX.DLSS5]\n"
-					    "NeuralUplift=1\n";
+					    "EnableHooks=2\n"
+					    "NeuralUplift=1\n"
+					    "NREnableUpscaling=0\n"
+					    "NRPreset=2\n"
+					    "NRStyle=2\n"
+					    "NRIntensity=1.500000\n"
+					    "NRLocalTone=1.400000\n"
+					    "NRLocalStructure=1.500000\n"
+					    "NRSkinStructure=1.000000\n"
+					    "NRAutoMask=1\n"
+					    "NRUICorrection=1\n"
+					    "NRPaperWhiteScale=1.000000\n"
+					    "NRTransferStrength=1.000000\n"
+					    "NRColorStrength=1.000000\n"
+					    "NRDepthMode=0\n";
 					std::fwrite(kDefaultIni, 1, sizeof(kDefaultIni) - 1, f);
 					std::fclose(f);
 				}
